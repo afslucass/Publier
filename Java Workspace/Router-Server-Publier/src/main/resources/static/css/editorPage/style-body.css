@@ -1,0 +1,47 @@
+
+
+section {
+    width: 70%;
+    margin: auto;
+
+    margin-top: 20px;
+}
+
+section > form {
+    display: flex;
+    flex-flow: column;
+
+    align-items: center;
+}
+
+#editor {
+    min-height: 300px;
+}
+
+input[type='file'] {
+    color: transparent;
+    margin-left: 160px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type='submit'] {
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+input[type='file']:focus {
+    outline: none;
+}
+
+#preview-container {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

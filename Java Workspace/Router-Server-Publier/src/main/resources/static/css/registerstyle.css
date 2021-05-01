@@ -1,0 +1,142 @@
+@font-face{
+    font-family:Roboto-Thin;
+    src: url("http://localhost:8080/Roboto/Roboto-Thin.ttf")
+}
+
+body {
+    background: #f3f3f3;
+}
+
+.titulo { 
+    font-family: Roboto-Thin;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 58px;
+    line-height: 59px; 
+    width: 210px;
+    height: 69px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.space {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.space-date {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.texto {
+    border: 1px solid #B3AFAF;
+    box-sizing: border-box;
+    border-radius: 9px;
+    display: inline-block;
+    padding-top: 9px;
+    background: #fafafa;
+    width: 300px;
+    font-family: Roboto-Thin;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.texto:focus{
+    outline: none;
+    border: 2px solid #4819A9;
+}
+
+.legenda {
+    font-family:Roboto-Thin;
+    color: black;
+    font-weight: 200;
+    line-height: 21px;
+    font-size: 18px;
+} 
+
+.layout_register {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    width: 21vw;
+    height: 80vh;
+    background: #FCFCFC;
+    border-radius: 170px;
+    border: none;
+}
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 45px;
+}
+
+.iconuser {
+    padding-top: 300px;
+    height: 150px;
+}
+
+.iconmountain {
+    text-center: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.upload {
+    text-center: center;
+    height: 28px;
+    margin-bottom: 10px;
+}
+
+.register_button {
+    margin: auto;
+    width: 188px;
+    height: 48px;
+    background: #330066;
+    border-radius: 24.5px;
+    color: #f3f3f3;
+    font-family: Roboto-Thin;
+    font-size: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid #330066;
+    transition: all 0.4s ease;
+}
+
+.register_button:hover {
+    color:#330066;
+    background: white;
+}
+
+.register_button:focus {
+    outline: none;
+}
+
+@font-face{
+    font-family:Roboto-Black;
+    src: url("http://localhost:8080/Roboto/Roboto-Black.ttf")
+}
+
+.goback { 
+    position: absolute;
+    text-decoration: none;
+    font-family: Roboto-black;
+    color: #330066;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 21px;
+    padding-top: 20px;
+    padding-left: 20px;
+}

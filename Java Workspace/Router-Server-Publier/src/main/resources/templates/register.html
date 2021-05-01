@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="css/registerstyle.css" >
+    <link rel="sortcut icon" href="imagens/icon2.png" >
+</head>
+<body>
+    <a href="/" class="goback">Go Back</a>
+    <div class="container">
+        <form action="#" th:action="@{/register-controller}" th:object="${registerModel}" method="post" enctype="multipart/form-data">
+        <fieldset class="layout_register">
+            <p class="titulo">Register</p>
+            <div class="box">
+                <div class="space">
+                    <label for="Nick" class="legenda">Nick</label> 
+                    <input type="text" id="Nick" class="texto" th:field="*{nick}" >
+                    <td th:if="${#fields.hasErrors('nick')}" th:errors="*{nick}">Name Error</td>
+                    <td th:text="${nickExists}" /></td>
+                </div>
+                <div class="space">
+                    <label for="Password" class="legenda">Password</label> 
+                    <input type="password" id="Password" class="texto" th:field="*{password}">
+                    <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Age Error</td>
+                </div>
+                <div class="space-date">
+                    <label for="Niver" class="legenda">Birth Date</label> 
+                    <input type="date" id="Niver" class="texto" th:field="*{date}">
+                    <td th:if="${#fields.hasErrors('date')}" th:errors="*{date}">Age Error</td>
+                </div>
+                <div>
+                </div>
+
+                <svg class="iconmountain" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    
+                    <rect width="36" height="36" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0" transform="scale(0.00444444)"/>
+                    </pattern>
+                    <image id="image0" width="225" height="225" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                </svg>
+				Max Image Size: 200kb
+                <td><input class='upload' type="file" accept="image/x-png,image/jpeg" th:field="*{image}" /></td>
+                <td th:if="${#fields.hasErrors('image')}" th:errors="*{image}">Age Error</td>
+                
+                <button class="register_button" type="submit">Register</button>
+                
+            </div>
+        </fieldset>   
+    </form>
+    </div> 
+</body>
+</html>

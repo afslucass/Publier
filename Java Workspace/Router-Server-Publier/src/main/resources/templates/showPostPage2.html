@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1 th:text='${document.title}'>Service Not Working</h1>
+
+	<img th:src="@{'data:image/jpeg;base64,'+${document.image}}">
+
+	<div th:utext='${document.message}' class='container'>Service Not Working</div>
+
+</body>
+</html>

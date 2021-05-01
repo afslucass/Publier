@@ -1,0 +1,51 @@
+
+.container-sugestions {
+    width: 400px;
+    height: auto;
+}
+
+.sugestions-item-container {
+    height: 45px;
+    width: 100%;
+
+    background-color: hsl(0, 0%, 98%);
+
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-top: 12px;
+
+    border-radius: 5px;
+
+    color: #1A1A1A;
+
+    font-family: 'Signika', sans-serif;
+    font-size: 16px;
+}
+
+#autoComplete_list {
+    left: -180px;
+}
+
+.sugestions-item-container:hover {
+
+    background-color: hsl(0, 0%, 90%);
+
+}
+
+.sugestions-item-title {
+    font-family: 'Signika', sans-serif;
+    font-size: 16px;
+
+    color: #050505;
+}
+
+.sugestions-item-nick {
+    font-family: 'Signika', sans-serif;
+    font-size: 14px;
+
+    color: #1A1A1A;
+
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}

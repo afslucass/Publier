@@ -1,0 +1,51 @@
+
+.ql-size-huge {
+    font-size: 2.5em;
+}
+.ql-size-large {
+    font-size: 1.5em;
+}
+.ql-size-small {
+    font-size: 0.75em;
+}
+
+.ql-align-justify {
+    text-align: justify;
+}
+.ql-align-center {
+    text-align: center;
+}
+.ql-align-right {
+    text-align: right;
+}
+.ql-direction-rtl {
+    direction: rtl;
+}
+
+.image-container {
+    width: 100%;
+    
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.image-container > img {
+    width: 50%;
+}
+
+.container {
+    width: 60%;
+    
+    margin: auto;
+    margin-top: 50px;
+}
+
+h1 {
+	margin-top: 250px;
+	margin-bottom: 350px;
+	
+	text-align: center;
+	font-family: sans-serif;
+}

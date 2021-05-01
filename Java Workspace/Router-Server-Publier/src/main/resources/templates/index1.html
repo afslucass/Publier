@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publier</title>
+</head>
+<body>
+	<a href='/register'>Register</a>
+    <form action="#" th:action="@{/login-controller}" th:object="${loginModel}" method="post">
+    	<table>
+                <tr>
+                    <td>Login:</td>
+                    <td><input type="text" th:field="*{nick}" /></td>
+                    <td th:if="${#fields.hasErrors('nick')}" th:errors="*{nick}">Name Error</td>
+                    <td th:text="${nickExists}" /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" th:field="*{password}" /></td>
+                    <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Age Error</td>
+                    <td th:text="${passwordValid}" /></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+    	</table>
+    </form>
+</body>
+</html>

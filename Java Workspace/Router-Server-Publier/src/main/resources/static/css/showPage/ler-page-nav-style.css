@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+html, body {
+    background-color: #F3F3F3;
+    margin: 0;
+    padding: 0;
+}
+
+nav > .listra {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > .listra > .roxo {
+    background-color: #330066;
+    height: 14px;
+    width: 80%;
+}
+
+nav > .listra > .branco {
+    background-color: #F3F3F3;
+    height: 14px;
+    width: 20%;
+}
+
+nav > .nav {
+    height: 59px;
+    width: 100%;
+    background-color: #4D0099;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+nav > .nav > .logo {
+    height: 59px;
+    width: 206px;
+    background-color: #F3F3F3;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > .nav > .items-container {
+    height: 100%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > .nav > .items-container > .create-post-button > a > div {
+    height: 43px;
+    width: 123px;
+    border-radius: 18px;
+    background-color: #F5EEFD;
+    opacity: 50%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > .nav > .items-container > .create-post-button > a > div:hover {
+    box-shadow: 5px 5px 10px black;
+}
+
+nav > .nav > .items-container > .create-post-button > a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-family: 'Signika', sans-serif;
+    font-size: 24px;
+}
+
+nav > .nav > .items-container > .create-post-button > a:hover {
+    color: #962dff;
+}
+
+nav > .nav > .items-container > .searchbar {
+    position: relative;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+nav > .nav > .items-container > .searchbar > input {
+    width: 205px;
+    height: 31px;
+    border-radius: 83px;
+
+    text-align: end;
+    padding-right: 10px;
+
+    font-family: 'Signika', sans-serif;
+
+    border: none;
+}
+
+nav > .nav > .items-container > .searchbar > input:focus {
+    outline: none;
+}
+
+nav > .nav > .items-container > .searchbar > svg {
+    height: 15px;
+    position: absolute;
+    left: 10px;
+}
+
+nav > .nav > .items-container > .menu {
+    height: auto;
+
+    margin-right: 25px;
+
+    cursor: pointer;
+    
+    padding-left: 15px;
+	padding-right: 15px;
+}
+
+nav > .nav > .items-container > .menu > a {
+	display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav > .nav > .items-container > .menu:hover {
+    box-shadow: 2px 2px 15px black;
+    border-radius: 20px;
+    transition: ease-in 0.1s;
+}
+
+nav > .nav > .items-container > .menu > a > img {
+	height: 33px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+	margin-right: 10px;
+}
+
+/* Menu */
+
+.close_modal {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    text-decoration: none;
+    color: red;
+}
+
+.modal {
+    position: fixed; 
+    top: 51px;
+    right: 10px;
+    font-family: Arial;
+    z-index: 99999;
+    background-image: url("http://localhost:8080/imagens/FumacaRoxa.jpeg");
+    background-repeat: no-repeat;
+    background-position-y: -530px;
+    background-position-x: -120px ;
+    background-size: 1000px;
+    border-radius: 13px;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    height: 100px;
+    width: 195px;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.log_out {
+    color: #fafafa;
+    font-size: 14px;
+    text-decoration: none;
+    float: right;
+    margin-right: 20px;
+}
+
+.menu_nick {
+    color: #fafafa;
+    margin-left: 15px;
+}
+
+.exit {
+    height: 13px;
+    width: 13px;
+    margin-left: 5px;
+    margin-top: 5px;
+    mix-blend-mode: multiply;
+}

@@ -1,0 +1,15 @@
+.ql-font-lato {
+    font-family: 'Lato', sans-serif;
+}
+.ql-font-oswald {
+      font-family: 'Oswald', sans-serif;
+}
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=lato]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=lato]::before {
+    content: 'Lato'; 
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="oswald"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="oswald"]::before {
+    content: 'Oswald';  
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publier</title>
+</head>
+<body>
+	<a href="/">Login</a>
+    <form action="#" th:action="@{/register-controller}" th:object="${registerModel}" method="post" enctype="multipart/form-data">
+    	<table>
+                <tr>
+                    <td>Nick:</td>
+                    <td><input type="text" th:field="*{nick}" /></td>
+                    <td th:if="${#fields.hasErrors('nick')}" th:errors="*{nick}">Name Error</td>
+                    <td th:text="${nickExists}" /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" th:field="*{password}" /></td>
+                    <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Age Error</td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><input type="date" th:field="*{date}" /></td>
+                    <td th:if="${#fields.hasErrors('date')}" th:errors="*{date}">Age Error</td>
+                </tr>
+                <tr>
+                    <td>Image:</td>
+                    <td><input type="file" accept="image/x-png,image/jpeg" th:field="*{image}" /></td>
+                    <td th:if="${#fields.hasErrors('image')}" th:errors="*{image}">Age Error</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+    	</table>
+    </form>
+</body>
+</html>

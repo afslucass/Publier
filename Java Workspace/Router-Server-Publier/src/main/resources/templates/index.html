@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publier</title>
+
+    <link rel="stylesheet" type="text/css" href="css/loginstyle.css" >
+    <link rel="sortcut icon" href="imagens/icon2.png" >
+
+</head>
+<body>
+    <div>
+       <img class="titulo" alt="title" src="imagens/titulocinza.jpeg"> 
+    </div>
+    <form action="#" th:action="@{/login-controller}" th:object="${loginModel}" method="post">
+        <fieldset class="layout_login">
+            <div class="box">
+                <div class="user_senha">
+                    <label for="User" class="legenda">User</label>
+                    <input type="text" id="User" class="texto" th:field="*{nick}" >
+                    <td th:if="${#fields.hasErrors('nick')}" th:errors="*{nick}">Name Error</td>
+                    <td th:text="${nickExists}" /></td>
+                </div>
+                <div class="user_senha">    
+                    <label for="Password" class="legenda">Password</label>
+                    <input type="password" id="Password" class="texto" th:field="*{password}">
+                    <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Age Error</td>
+                    <td th:text="${passwordValid}" /></td>
+                </div>
+            </div>  
+            <div class="butoes">
+                <button class="butao_login">Login</button><br>
+                <button type="button" onclick= "redirecionar()" class="butao_register">Register</button>
+            </div>
+            <div>
+                <img class="fumaca" alt="detalhe" src="imagens/fumasacortada.jpeg">
+            </div>
+
+        </fieldset>      
+    </form>
+    <script>
+    	function redirecionar() {
+	    	window.location.href = '/register'		
+    	}
+    </script>
+</body>
+</html>
